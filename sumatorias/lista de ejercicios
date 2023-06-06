@@ -1,1 +1,142 @@
+\documentclass[letterpaper,12pt,spanish]{article}
 
+\usepackage{geometry}
+\usepackage{lipsum} % Paquete para generar texto de ejemplo
+\usepackage{xcolor}
+\definecolor{papiro}{RGB}{255, 241, 207} % Definir el color "papiro"
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{tcolorbox}
+\usepackage[utf8]{inputenc}
+
+\usepackage[T1]{fontenc} % Codificación de fuentes
+\usepackage[utf8]{inputenc} % Codificación de entrada
+\usepackage{lmodern} % Fuente Latin Modern
+\usepackage{amsmath} % Paquete para símbolos y entornos matemáticos
+\usepackage{amsfonts} % Paquete para fuentes matemáticas
+\usepackage{amssymb} % Paquete para símbolos matemáticos adicionales
+
+
+
+\newtheorem{theorem}{\color{red}{\underline{Teorema \#}}}
+\newtheorem{Definicion}{\color{green}{{Definici\'on \#}}}
+\newtheorem{eje}{\color{red}{\underline{\em{Ejemplo} \#}}}
+\newtheorem{ejercicio}{\color{violet}{{\em{Ejercicio}}}}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\lstdefinestyle{pythonstyle}{
+    language=Python,
+    basicstyle=\small\ttfamily,
+    keywordstyle=\color{blue},
+    commentstyle=\color{gray},
+    stringstyle=\color{red},
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    breaklines=true,
+    showstringspaces=false,
+    frame=single
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newenvironment{jupyterbox}{%
+  \begin{tcolorbox}[colback=white,colframe=black!70!white,sharp corners=all,boxrule=0.5pt,enhanced jigsaw,breakable]%
+}{\end{tcolorbox}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Configuración de fuentes
+\renewcommand{\familydefault}{\rmdefault} % Fuente serif para el cuerpo del texto
+\usepackage{mathrsfs} % Fuente para letras caligráficas en matemáticas
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagestyle{plain}
+\pagecolor{papiro} % Color de la página estilo papiro
+
+\newcommand{\sen}{{\rm sen}}
+\newcommand{\senh}{{\rm senh}}
+\newcommand{\arctg}{{\rm arctg}}
+\newcommand{\R}{\Bbb{R}}
+\newcommand{\Z}{\Bbb{Z}}
+\newcommand{\C}{\Bbb{C}}
+\newcommand{\N}{\Bbb{N}}
+\newcommand{\K}{\Bbb{K}}
+\newcommand{\Q}{\Bbb{Q}}
+\newcommand{\M}{\Bbb{M}}
+\newcommand{\Po}{\Bbb{P}}
+\newcommand{\I}{\Bbb{I}}
+\newcommand{\ent}{{\Longrightarrow}}
+\newcommand{\tg}{{\rm tg}}
+\newcommand{\D}{{\partial}}
+\newcommand{\arcsen}{{\rm arcsen}}
+\newcommand{\fracc}{\displaystyle\frac}
+\newcommand{\ssum}{\displaystyle\sum}
+\newcommand{\Int}{\displaystyle\int}
+\newcommand{\Iint}{\displaystyle\iint}
+\newcommand{\sol}{{\bf{Soluci\'on. }}}
+\newcommand{\ssi}{{\Longleftrightarrow}}
+
+
+%%%%  ENCABEZADO Y PIE DE PAGINA  %%%%%
+
+\textheight 22cm \textwidth 16cm \oddsidemargin 0 cm
+\topmargin -2cm
+\parindent=0pt
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%\setmainfont{Calibri Light}
+
+\begin{document}
+
+\begin{minipage}{10cm}
+\small{\textsc
+{Francois Moraga \\
+francoismoraga@gmail.com \\}
+Material didáctico}	
+\end{minipage}
+
+\begin{center}
+\textbf{\large LISTA DE EJERCICIOS} \\
+\textbf{\large Sumatorias} \\
+\end{center}
+
+\begin{enumerate}
+
+\item Exprese las siguientes sumas usando la notación de sumatorias y calcule su resultado
+\begin{enumerate}
+\item $3+4+5+6+7+8+9+10+11+12$
+\item $1^2+2^2+3^2+4^2+5^2+6^2+7^2-\left(5+6+7+8+9+10+11+12+13+14\right)$
+\end{enumerate}
+
+\item Determine el valor de $\beta$ si se sabe que $\ssum_{i=1}^{6} \beta i = 630$.
+
+\item Determine el valor de $\ssum_{i=5}^{15} i\cdot (i-3)$.
+
+\item Calcular $\ssum_{i=8}^{80} 2i\cdot (i+2)$
+
+\item Calcular $\ssum_{i=5}^{80} (i+1)(i-1)$
+
+\item Calcular $\ssum_{i=10}^{800} \fracc{i^2+2i}{3}$
+
+\item Considerando que $\ssum_{i=1}^{n} a_i = \fracc{n(3n-1)}{2}$, determine el resultado de $\ssum_{i=7}^{15} a_i$. 
+
+\item Calcular el valor de la constante $\alpha$ de modo que $\ssum_{i=1}^{10} \left(i^2-3i+10\alpha\right)=250$.
+
+\item Si se sabe que $\ssum_{i=1}^5 x^2_i = 300$ y $\ssum_{i=1}^5 x_i = 18$. Determine el valor de $\ssum_{i=1}^5 (x_i-2)^2$.
+
+\item Si se sabe que $\ssum_{i=1}^6 (2x_i - 3) =18$ ; $\ssum_{i=1}^5 \left(x_i-6\right)^2$ y $x_6 = 8$, determine el valor de $\ssum_{i=1}^{6} x^2_i$.
+
+\item Si, para todo $n\in \N$, $\ssum_{i=1}^{m} a_i = 2m^2+3$, calcule el valor de $\ssum_{i=n+1}^{2n}a_i$. 
+\end{enumerate}
+
+
+
+
+
+
+
+\end{document}
